@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import userRoutes from '../Backend/Routes/Userroutes.js';
+import userRoutes from './Backend/Routes/Userroutes.js';
 
 const app = express();
 const PORT = 5000;

@@ -6,7 +6,7 @@ function App() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/users").then((res) => setUsers(res.data));
+    axios.get("https://citadel-7qrm.onrender.com/users").then((res) => setUsers(res.data));
   }, []);
 
   const handleLike = () => setIndex((prev) => prev + 1);

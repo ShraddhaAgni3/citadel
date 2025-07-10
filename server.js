@@ -6,7 +6,13 @@ import userRoutes from './Backend/Routes/Userroutes.js';
 const app = express();
 const PORT = 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://meetcitadel.netlify.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+app.options('*', cors()); // handle preflight
+
 app.use(express.json());
 app.use('/users', userRoutes);
 
